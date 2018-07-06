@@ -1,0 +1,53 @@
+h1 {
+  color: white;
+  font-size: 52pt;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section-title {
+  
+  text-align: center;
+  padding: 100px
+  
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+#section1{
+  background-color: #AC47E9;
+}
+
+.btn-ui {
+  transition: 0.2s;
+
+  cursor: pointer;
+  font-family: 'Montserrat';
+  text-align: center;
+  background-color: #6DA34D;
+  color: white;
+
+  margin-top: 75px;
+  
+  width: 200px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border-radius: 30px;
+}
+
+.btn-ui:hover {
+
+  transition: 0.2s;
+  transform: translate(-50%) scale(1.1);
+
+}
+
+.hcenter {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
