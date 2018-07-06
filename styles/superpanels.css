@@ -1,6 +1,7 @@
 .superpanel {
   transition: 0.3s;
   
+
   position: absolute;
   z-index: 999999999 !important;
   left: 50%;
@@ -64,4 +65,9 @@
 .superpanel.hidden {
   transition: 0.3s;
   transform: translate(-50%, -100vh);
+}
+
+.superpanel.hidden-right {
+  transition: 0.3s;
+  transform: translateX(100vh);
 }
