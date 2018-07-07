@@ -1,11 +1,10 @@
 .superpanel {
   transition: 0.3s;
-  
 
   position: absolute;
   z-index: 999999999 !important;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotateZ(0deg);
   
   width: 300px;
   height: auto;
@@ -29,9 +28,12 @@
   padding: 20px;
   
   font-family: 'Open Sans';
-  font-size: 12pt;
-  text-align: 
-  
+  font-size: 14pt;
+  line-height: 20pt;
+}
+
+.superpanel p span {
+  font-size: 24pt;
 }
 
 .superpanel .btn {
@@ -64,7 +66,7 @@
 
 .superpanel.hidden {
   transition: 0.3s;
-  transform: translate(-50%, -100vh);
+  transform: translate(-50%, -100vh) rotateZ(300deg) !important;
 }
 
 .superpanel.hidden-right {
