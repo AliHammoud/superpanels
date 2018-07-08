@@ -17,6 +17,10 @@
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
+.superpanel.stack {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 .superpanel h1 {
   font-size: 24pt;
   color: black;
