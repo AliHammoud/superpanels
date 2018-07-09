@@ -7,6 +7,7 @@ window.onload = function(e){
   
   show_btns = document.querySelectorAll('.show');
   hide_btns = document.querySelectorAll('.hide');
+  hideall_btns = document.querySelectorAll('.hideall');
   
   for (i = 0; i < show_btns.length; i ++){
     show_btns[i].addEventListener('click', show);
@@ -15,6 +16,34 @@ window.onload = function(e){
   for (i = 0; i < hide_btns.length; i ++){
     hide_btns[i].addEventListener('click', hide);
   }
+  
+  for (i = 0; i < hideall_btns.length; i ++){
+    hideall_btns[i].addEventListener('click', hideAll);
+  }
+  
+  var im = document.getElementById('im');
+  im.style.width = im.parentElement.style.width;
+  im.style.height = im.style.width;
+  
+  var ctx = document.getElementById('myChart');
+  ctx.style.width = ctx.parentElement.style.width;
+  ctx.style.height = 300 + "px";
+  
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['win', 'lose'],
+      datasets: [{
+        label: '% probability',
+        data: [2.31, 97.69],
+        backgroundColor: [
+          'rgba(51, 153, 51, 0.5)',
+          'rgba(255, 102, 102, 0.5)'
+        ]
+      }]
+    }
+  });
+  
 }
 
 function show(e){
@@ -39,6 +68,10 @@ function hide(e){
       }
     }
   }
+}
+
+function hideAll(e){
+  stackOutAll();
 }
 
 function toggleHide(node){
@@ -76,7 +109,7 @@ function stackIn(obj, spacing, index){
   var w = obj.getBoundingClientRect().width;
 
   //var offset = (w * (index + 1)) + w/2 + (spacing * (index + 1));
-  var offset = 300 + (spacing * (index + 1));
+  var offset = window.innerHeight/1.75 + (spacing * (index + 1));
   
   obj.style.transform = "translate(-50%, " + offset + "px) rotate(0deg)";
   obj.classList.add("stack");
@@ -87,4 +120,13 @@ function stackOut(obj){
   var offset = -50 + "%";
   obj.style.transform = "translateX(" + offset + ") rotate(0deg)";
   obj.classList.remove("stack");
+}
+
+function stackOutAll(){
+  var offset = -50 + "%";
+  for (i = 0; i < panels.length; i++){
+    panels[i].style.transform = "translateX(" + offset + ") rotate(0deg)";
+    panels[i].classList.remove("stack");
+    panels[i].classList.add("hidden");
+  }
 }

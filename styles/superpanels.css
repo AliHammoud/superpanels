@@ -18,7 +18,7 @@
 }
 
 .superpanel.stack {
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .superpanel h1 {
@@ -60,11 +60,19 @@
   border-radius: 30px;
 }
 
+.superpanel .btn.hide {
+  
+  color: lightgray;
+  border: 2px solid lightgray;
+  
+}
+
 .superpanel .btn:hover {
   
   transition: 0.2s;
   background-color: #6DA34D;
   color: white;
+  border: 2px solid rgba(0, 0, 0, 0);
   
 }
 

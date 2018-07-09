@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/superpanels.css">
+    <script type="application/x-javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
   </head>
   <body>
     <script src="scripts/superpanels.js"></script>
@@ -30,14 +31,16 @@
           show next
         </div>
         <div class="btn hide">
-          done
+          Nah, I wanna go back
         </div>
       </div>
 
       <div class="superpanel hidden">
         <h1>Step 2</h1>
         <p>
-          They say if you click next, you'll win.</p>
+          They say if you click next, you'll win.
+        </p>
+        <img id="im" src="https://media.giphy.com/media/10vfyRDXEr24RW/giphy.gif" width="300" height="225">
         <div class="btn show">
           win
         </div>
@@ -49,20 +52,23 @@
       <div class="superpanel hidden">
         <h1>Step 3</h1>
         <p>
-          They say if you click next, you'll win.</p>
+          Let's see your chances...
+        </p>
+        <canvas id="myChart">
+        </canvas>
         <div class="btn show">
-          win
+          fancy my luck
         </div>
         <div class="btn hide">
-          done
+          I won't win, take me back
         </div>
       </div>
       
       <div class="superpanel hidden">
         <h1>So Close!</h1>
-        <p>Unfortunately, you did not click next. You lost</p>
-        <div class="btn hide">
-          close second
+        <p>Unfortunately, you did not win. You lost <br><br><span>💔</span></p>
+        <div class="btn hideall">
+          Go back
         </div>
       </div>
     </section>
