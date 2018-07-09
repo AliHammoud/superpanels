@@ -1,10 +1,23 @@
+.supersection {
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  visibility: hidden;
+  
+}
+
 .superpanel {
   transition: 0.3s;
 
   position: absolute;
   z-index: 999999999 !important;
   left: 50%;
-  transform: translateX(-50%) rotateZ(0deg);
+  top: 50%;
+  transform: translate(-50%, -50%) rotateZ(0deg);
   
   width: 300px;
   height: auto;
@@ -78,10 +91,10 @@
 
 .superpanel.hidden {
   transition: 0.3s;
-  transform: translate(-50%, -100vh) rotateZ(300deg) !important;
+  transform: translate(-50%, -200vh) rotateZ(300deg) !important;
 }
 
 .superpanel.hidden-right {
   transition: 0.3s;
-  transform: translateX(100vh);
+  transform: translateX(100vw);
 }
